@@ -1,5 +1,8 @@
 problem link: https://leetcode.com/problems/destination-city/
 
+/* Solution 1 using unordered set *********
+ * faster than 44.34% of C++ online submissions */
+
 class Solution {
 public:
     string destCity(vector<vector<string>>& paths) {
@@ -19,8 +22,8 @@ public:
     }
 };
 
-/* A faster solution ************
- * Faster than 99.01% C++ submission */
+/* Solution 2 using unordered map ************
+ * Faster than 99.01% C++ submissions */
  
 class Solution {
 public:
