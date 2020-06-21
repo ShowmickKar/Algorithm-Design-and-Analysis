@@ -2,6 +2,8 @@
  *Problem Difficulty: Hard
  *Time Complexity: O(N)
  *Space Complexity: O(N)
+ *Runtime: 16 ms, faster than 87.19% of C++ online submissions for Longest Consecutive Sequence.
+ *Memory Usage: 11.1 MB, less than 36.20% of C++ online submissions for Longest Consecutive Sequence.
 */ 
 
 class Solution {
