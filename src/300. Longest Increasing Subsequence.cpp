@@ -1,6 +1,11 @@
 Problem link: https://leetcode.com/problems/longest-increasing-subsequence/
 Problem Difficulty: Medium
 
+/* Solution 1 - Using Dynamic Programming and Memoization 
+ * Time Complexity: O(N^2)
+ * Space Complexity O(N)
+ */
+
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
@@ -18,3 +23,8 @@ public:
         return ans;
     }
 };
+
+/* Solution 2 - Using Dynamic Programming and Binary Search
+ * Time Complexity: O(NlogN)
+ * Space Complexity: O(N)
+ */
