@@ -1,6 +1,13 @@
 Problem link: https://leetcode.com/problems/max-increase-to-keep-city-skyline/
 Problem difficulty: Medium
 
+/*** Solution Detail **
+ * TIme Complexity: O(N^2)
+ * Space Complexity: O(N)
+ * Runtime: 12 ms, faster than 93.43% of C++ online submissions for Max Increase to Keep City Skyline.
+ * Memory Usage: 10.2 MB, less than 79.14% of C++ online submissions for Max Increase to Keep City Skyline.
+ */
+
 class Solution {
 public:
     int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
