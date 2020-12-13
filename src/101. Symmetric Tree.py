@@ -8,7 +8,7 @@
 #         self.right = right
 
 
-# Naive Solution:
+# Solution 1:
 
 class Solution:
     def checkPalindrome(self, arr):
@@ -43,7 +43,7 @@ class Solution:
                 return False
         return True
 
-# A shorter solution using recursive property
+# Solution 2: A shorter solution using recursive property
 
 class Solution:
     def isMirror(self, node1, node2):
