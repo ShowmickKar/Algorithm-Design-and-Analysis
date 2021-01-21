@@ -17,28 +17,29 @@
  */
 
 /* Solution 1: Using HashSet */
-class Solution {
-    ArrayList<Integer> store = new ArrayList<Integer>();
 
-    public void traverse(TreeNode node) {
+class Solution {
+    boolean flag = false;
+
+    public void traverse(TreeNode node, int target, HashSet<Integer> s) {
         if (node == null)
             return;
-        store.add(node.val);
-        traverse(node.left);
-        traverse(node.right);
+        if (s.contains(target - node.val)) {
+            flag = true;
+            return;
+        }
+        s.add(node.val);
+        traverse(node.left, target, s);
+        traverse(node.right, target, s);
     }
 
     public boolean findTarget(TreeNode root, int k) {
-        traverse(root);
         HashSet<Integer> s = new HashSet<Integer>();
-        for (int node : store) {
-            if (s.contains(k - node)) {
-                store.clear();
-                return true;
-            }
-            s.add(node);
+        traverse(root, k, s);
+        if (flag) {
+            flag = false;
+            return true;
         }
-        store.clear();
         return false;
     }
 }
