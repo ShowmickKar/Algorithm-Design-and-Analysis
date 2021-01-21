@@ -16,7 +16,7 @@
  * }
  */
 
-/* Solution 1: Using HashSet
+/* Solution 1: Using HashSet */
 class Solution {
     ArrayList<Integer> store = new ArrayList<Integer>();
 
@@ -43,7 +43,7 @@ class Solution {
     }
 }
 
-/* Solution 2: Using Inorder Traversal(Faster then 98.11% Solution)
+/* Solution 2: Using Inorder Traversal(Faster then 98.11% Solution) */
 
 class Solution {
     private void inorderTraversal(TreeNode node, ArrayList<Integer> helper) {
