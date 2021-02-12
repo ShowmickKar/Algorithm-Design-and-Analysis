@@ -23,3 +23,19 @@ public class Solution {
         return false;
     }
 }
+
+
+// Approach 2 Using Fast and Slow Pointers
+
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) return false;
+        ListNode slowPointer = head, fastPointer = head;
+        while (slowPointer != null && fastPointer != null && fastPointer.next != null) {
+            slowPointer = slowPointer.next;
+            fastPointer = fastPointer.next.next;
+            if (slowPointer == fastPointer) return true;
+        }
+        return false;
+    }
+}
