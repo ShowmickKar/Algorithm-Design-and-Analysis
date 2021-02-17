@@ -1,5 +1,7 @@
 /* Problem Link: https://leetcode.com/problems/squares-of-a-sorted-array/ */
 
+// Approach 1 (Time Complexity O(N) Space Compleity O(N))
+
 class Solution {
     public int[] sortedSquares(int[] nums) {
         ArrayList<Integer> positive  = new ArrayList<Integer>();
@@ -29,6 +31,35 @@ class Solution {
             ans[ptr] = negative.get(n) * negative.get(n);
             n--;
             ptr++;
+        }
+        return ans;
+    }
+}
+
+// Approach 2 (Time Complexity O(N) Space Complexity O(1))
+
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        int[] ans = new int[nums.length];
+        int i = 0, l = 0, r = nums.length - 1;
+        while (l <= r) {
+            int left = nums[l] * nums[l], right = nums[r] * nums[r];
+            if (right >= left) {
+                ans[i] = right;
+                r--;
+            } else {
+                ans[i] = left;
+                l++;
+            }
+            i++;
+        }
+        l = 0; r = nums.length - 1;
+        while (l < r) {
+            int temp = ans[l];
+            ans[l] = ans[r];
+            ans[r] = temp;
+            l++;
+            r--;
         }
         return ans;
     }
