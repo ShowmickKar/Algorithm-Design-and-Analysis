@@ -1,8 +1,6 @@
 /* Problem Link: https://leetcode.com/problems/backspace-string-compare/ */
 
 class Solution {
-    public boolean backspaceCompare(String S, String T) {
-class Solution {
     public boolean areSame(Stack<Character> s, Stack<Character> t) {
         return s.equals(t);
     }
