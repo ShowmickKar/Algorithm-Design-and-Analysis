@@ -1,6 +1,9 @@
 /*
   Problem Link: https://leetcode.com/problems/n-queens/
   Problem Type: Backtracking, Depth First Search, Recursion, Iterating through Combinations
+  
+  !!Note: My current code gives TIME LIMIT EXCEEDED when the value of n is 8 or greater.
+          Will update it once I've optimized my code.
 */
 
 class Solution {
